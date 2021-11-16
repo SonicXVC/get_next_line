@@ -6,7 +6,7 @@
 /*   By: ameteori <ameteori@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:56:51 by ameteori          #+#    #+#             */
-/*   Updated: 2021/11/16 15:26:30 by ameteori         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:35:42 by ameteori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*read_ostatok(int fd, char *ostatok)
 
 char	*get_next_line(int fd)
 {
-	static char		*ostatok[MAX_OPEM];
+	static char		*ostatok[OPEN_MAX];
 	char			*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
