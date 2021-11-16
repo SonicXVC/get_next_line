@@ -6,13 +6,12 @@
 /*   By: ameteori <ameteori@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:56:51 by ameteori          #+#    #+#             */
-/*   Updated: 2021/11/14 17:04:35 by ameteori         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:26:30 by ameteori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-//#include <stdio.h>
-//#include <fcntl.h>
+#include "get_next_line_bonus.h"
+# include <limits.h>
 
 char	*read_ostatok(int fd, char *ostatok)
 {
@@ -43,7 +42,7 @@ char	*read_ostatok(int fd, char *ostatok)
 
 char	*get_next_line(int fd)
 {
-	static char		*ostatok[4096];
+	static char		*ostatok[MAX_OPEM];
 	char			*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
@@ -55,27 +54,3 @@ char	*get_next_line(int fd)
 	ostatok[fd] = new_ost(ostatok[fd]);
 	return (line);
 }
-
-/*int main()
-{
-	int fd;
-	
-	fd = open("text.txt", O_RDONLY);
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-}*/

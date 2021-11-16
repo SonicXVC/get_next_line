@@ -6,13 +6,11 @@
 /*   By: ameteori <ameteori@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:56:51 by ameteori          #+#    #+#             */
-/*   Updated: 2021/11/14 17:00:16 by ameteori         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:22:53 by ameteori         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-//#include <stdio.h>
-//#include <fcntl.h>
 
 char	*read_ostatok(int fd, char *ostatok)
 {
@@ -55,27 +53,3 @@ char	*get_next_line(int fd)
 	ostatok = new_ost(ostatok);
 	return (line);
 }
-
-/*int main()
-{
-	int fd;
-	
-	fd = open("text.txt", O_RDONLY);
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-	printf("%s\n", get_next_line(fd));
-}*/
